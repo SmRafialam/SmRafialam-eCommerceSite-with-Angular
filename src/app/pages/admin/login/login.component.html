@@ -1,0 +1,33 @@
+
+<div class="parent">
+  <div class="showcase">
+    <div class="showcase-content">
+      <div class="showcase-top">
+        <h1>LOGIN</h1>
+      </div>
+      <div class="formm">
+        <form>
+          <h2>Welcome user!
+          </h2>
+          <div class="info">
+            <input class="email" name="userName" [(ngModel)]="loginObj.userName" type="email" placeholder="Email" id="email"> <br>
+            <input class="email" name="password" [(ngModel)]="loginObj.password" type="password" placeholder="Password" id="password">
+          </div>
+          <div class="btn">
+            <button class="btn-primary" type="submit" (click)="onLogin()">Sign In</button>
+          </div>
+          <div class="help">
+            <div>
+              <input value="true" type="checkbox"><label>Remember me</label>
+            </div>
+          </div>
+          <!-- <div class="signup">
+            <p>New to User ?</p>
+            <a href="#">Sign up now</a>
+          </div> -->
+        </form>
+      </div>
+    </div>
+</div>
+  <script src="./index.js"></script>
+</div>
