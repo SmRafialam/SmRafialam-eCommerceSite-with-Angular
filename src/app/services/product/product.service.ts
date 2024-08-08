@@ -10,6 +10,18 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getAllProducts(){
-    this.http.get(`${environment.apiUrl}/GetAllProducts`)
+    return this.http.get(`${environment.apiUrl}/GetAllProducts`)
+  }
+
+  saveProduct(obj:any){
+    return this.http.post(`${environment.apiUrl}/CreateProduct`,obj)
+  }
+
+  updateProduct(obj:any){
+    return this.http.post(`${environment.apiUrl}/UpdateProduct`,obj)
+  }
+
+  deleteProduct(id: any){
+    return this.http.get(`${environment.apiUrl}/UpdateProduct`,id)
   }
 }
