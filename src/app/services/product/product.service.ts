@@ -13,6 +13,10 @@ export class ProductService {
     return this.http.get(`${environment.apiUrl}/GetAllProducts`)
   }
 
+  getAllProductsByCategoryId(id:number){
+    return this.http.get(`${environment.apiUrl}/GetAllProductsByCategoryId?id=`+ id)
+  }
+
   saveProduct(obj:any){
     return this.http.post(`${environment.apiUrl}/CreateProduct`,obj)
   }
